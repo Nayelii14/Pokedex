@@ -33,10 +33,49 @@
                             <span>Registrar Pokémon</span>
                         </div>
                         <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="nombre-txt">Nombre Pokémon</label>
+                                <input class="form-control" id= "nombre-txt" type="text">
+                            </div>
 
+                            <div class="mb-3">
+                                <label class="form-label" for="descripcion-txt">Descripción</label>
+                                <input class="form-control" id="descripcion-txt" type="text">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="">Legendario</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="legendario-rb" id="legendario-si">
+                                    <label for="legendario-si">Sí</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="legendario-rb" id="legendario-no">
+                                    <label class="form-check-label" for="legendario-si">No</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo</label>
+                                <select class="form-select" type="select">
+                                    <option selected>Seleccione un tipo</option>
+                                    <option value="1">Fuego</option>
+                                    <option value="2">Agua</option>
+                                    <option value="3">Planta</option>
+                                    <option value="4">Normal</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="card-footer">
-
+                        <div class="card-footer row">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-success" id="registrar-btn">Registrar</button>
+                            </div>
+                            <div class="col-6 text-end">
+                                <button type="button" class="btn btn-info" id="limpiar-btn">Limpiar</button>
+                            </div>
+                            
                         </div>
                     </div>
               </div>
@@ -46,7 +85,26 @@
                           <span>Pokédex</span>
                       </div>
                       <div class="card-body">
-
+                        <table class="table table-hover table-border table-s">
+                            <thead>
+                                <tr>
+                                    <th>Número</th>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th>Descripción</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Bulbasaur</td>
+                                    <td>Planta</td>
+                                    <td>Látigo cepa</td>
+                                    <td>Eliminar</td>
+                                </tr>
+                            </tbody>
+                        </table>
                       </div>
                       <div class="card-footer">
                           
@@ -59,6 +117,6 @@
       </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
+    <script src="js/index.js"></script>
   </body>
 </html>
