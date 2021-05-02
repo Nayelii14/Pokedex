@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.3-web/css/all.min.css">
     <title>Pokédex</title>
   </head>
   <body>
@@ -40,31 +40,32 @@
 
                             <div class="mb-3">
                                 <label class="form-label" for="descripcion-txt">Descripción</label>
-                                <input class="form-control" id="descripcion-txt" type="text">
+                                <textarea id="descripcion-txt"></textarea>
                             </div>
 
                             <div class="mb-3">
                                 <label for="">Legendario</label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="legendario-rb" id="legendario-si">
-                                    <label for="legendario-si">Sí</label>
+                                    <label for="legendario-si" class="form-check-label">Sí</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="legendario-rb" id="legendario-no">
-                                    <label class="form-check-label" for="legendario-si">No</label>
+                                    <input class="form-check-input" type="radio" name="legendario-rb" id="legendario-no" checked>
+                                    <label class="form-check-label" for="legendario-no">No</label>
                                 </div>
 
                             </div>
 
                             <div class="mb-3">
-                                <label for="tipo" class="form-label">Tipo</label>
-                                <select class="form-select" type="select">
+                                <label for="tipo-select" class="form-label">Tipo</label>
+                                <select class="form-select" id="tipo-select">
                                     <option selected>Seleccione un tipo</option>
-                                    <option value="1">Fuego</option>
-                                    <option value="2">Agua</option>
-                                    <option value="3">Planta</option>
-                                    <option value="4">Normal</option>
+                                    <option value="Fuego">Fuego</option>
+                                    <option value="Agua">Agua</option>
+                                    <option value="Planta">Planta</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="Electrico">Eléctrico</option>
                                 </select>
                             </div>
                         </div>
@@ -95,7 +96,7 @@
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tabla-tbody">
                                 <tr>
                                     <td>1</td>
                                     <td>Bulbasaur</td>
@@ -117,6 +118,7 @@
       </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="vendor/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
